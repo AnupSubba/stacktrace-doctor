@@ -28,6 +28,7 @@ FRAMEWORKS = {
     "javax.persistence": "JPA",
     "com.zaxxer.hikari": "HikariCP",
     "org.apache.catalina": "Tomcat",
+    "org.apache.tomcat": "Tomcat",
     "com.fasterxml.jackson": "Jackson",
     "org.yaml.snakeyaml": "SnakeYAML",
 }
