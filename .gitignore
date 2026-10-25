@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+*.egg-info/
+dist/
+build/
+
+# Secrets - never commit
+.env
+.streamlit/secrets.toml
+
+# Local documentation clones used by scripts/ingest.py
+_docs/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

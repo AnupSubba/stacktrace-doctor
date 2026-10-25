@@ -1,0 +1,45 @@
+[project]
+name = "stacktrace-doctor"
+version = "0.1.0"
+description = "Paste a Java stack trace, get the root cause, a fix and the docs."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Anup Kumar Subba", email = "anupsubba007@gmail.com" }]
+dependencies = [
+    "langchain-core",
+    "langchain-community",
+    "langchain-text-splitters",
+    "langchain-groq",
+    "langchain-google-genai",
+    "langchain-chroma",
+    "fastembed",
+    "streamlit",
+    "pydantic",
+    "python-dotenv",
+    "langsmith",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff", "pre-commit"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stacktrace_doctor"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]  # real stack traces are long
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
