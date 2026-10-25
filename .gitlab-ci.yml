@@ -26,6 +26,11 @@ lint:
     - uv run ruff check .
     - uv run ruff format --check .
 
+requirements-up-to-date:
+  stage: check
+  script:
+    - uv export --format requirements-txt --no-hashes --no-dev --no-header > /tmp/requirements.txt
+    - diff -u requirements.txt /tmp/requirements.txt
 
 test:
   stage: test

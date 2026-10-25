@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-25
+### Added
+- Streamlit UI with sample traces, exception-chain view, confidence badge, per-session limit and caching.
+- UI smoke tests with Streamlit AppTest.
+- Evaluation set of 10 traces and a LangSmith evaluation script.
+- `requirements.txt` exported from uv for hosting.
+
 ## [0.2.0] - 2026-10-25
 ### Added
 - 24 knowledge cards for common Spring, JPA/Hibernate, Spring Security and core Java errors.
