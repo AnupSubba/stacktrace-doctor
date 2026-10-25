@@ -1,0 +1,11 @@
+file,root_cause,key_fix
+01-missing-bean.txt,no qualifying bean,@Service
+02-lazy-initialization.txt,no session,JOIN FETCH
+03-port-in-use.txt,already in use,server.port
+04-null-pointer.txt,getAddress,null
+05-json-parse-error.txt,LocalDate,date format
+06-hikari-timeout.txt,connection is not available,pool
+07-circular-dependency.txt,circular,refactor
+08-concurrent-modification.txt,modified while,removeIf
+09-no-password-encoder.txt,PasswordEncoder,bcrypt
+10-missing-property.txt,payment.api.url,property

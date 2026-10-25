@@ -1,0 +1,14 @@
+2026-10-20T14:45:51.902+05:30 ERROR 18732 --- [demo] [nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:466)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:531)
+	at com.example.demo.service.ReportService$$SpringCGLIB$$0.generate(<generated>)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30005ms (total=10, active=10, idle=0, waiting=37)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	... 41 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30005ms (total=10, active=10, idle=0, waiting=37)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:686)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	... 52 common frames omitted

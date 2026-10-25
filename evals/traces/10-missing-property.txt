@@ -1,0 +1,5 @@
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentClient': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'payment.api.url' in value "${payment.api.url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	... 30 common frames omitted

@@ -1,0 +1,4 @@
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'invoiceService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:355)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:227)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)

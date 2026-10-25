@@ -1,0 +1,24 @@
+2026-10-20T09:00:04.789+05:30 ERROR 20114 --- [demo] [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+	at org.springframework.boot.web.server.PortInUseException.lambda$throwIfPortBindingException$0(PortInUseException.java:70)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:251)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:10)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:275)
+	... 24 common frames omitted
