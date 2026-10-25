@@ -2,7 +2,7 @@
 
 **Paste a Java / Spring Boot stack trace. Get the root cause in plain English, a fix, and links to the official docs.**
 
-Free, no sign-up. Live demo: _add your link after deployment_
+Free, no sign-up. Live demo: https://stacktrace-doctor.streamlit.app
 
 ## Why I built it
 
