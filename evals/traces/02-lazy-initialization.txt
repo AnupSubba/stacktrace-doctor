@@ -1,0 +1,10 @@
+2026-10-20T11:02:11.456+05:30 ERROR 18732 --- [demo] [nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.example.demo.domain.Customer.orders: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218)
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:615)
+	at org.hibernate.collection.spi.PersistentBag.iterator(PersistentBag.java:363)
+	at com.example.demo.web.CustomerController.toDto(CustomerController.java:41)
+	at com.example.demo.web.CustomerController.getCustomer(CustomerController.java:29)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)

@@ -1,0 +1,7 @@
+2026-10-20T12:30:45.001+05:30 ERROR 18732 --- [demo] [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.demo.domain.Address.getCity()" because the return value of "com.example.demo.domain.Customer.getAddress()" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.demo.domain.Address.getCity()" because the return value of "com.example.demo.domain.Customer.getAddress()" is null
+	at com.example.demo.service.ShippingService.estimate(ShippingService.java:27)
+	at com.example.demo.web.ShippingController.quote(ShippingController.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
